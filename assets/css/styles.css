@@ -1,0 +1,722 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --primary-color: #0f1b4c;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ============Common============== */
+
+.content {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 98px;
+    padding: 18px 16px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 8px;
+    background: var(--primary-color);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/*================ Header=========== */
+.fixed-header {
+    position: sticky;
+    padding-top: 26px;
+    background-color: #e6f0ff;
+
+    top: -26px;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    padding: 12px 0;
+    background-color: #e6f0ff;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    /* ta su dung flex thay vi inline or inline block la boi vi
+    khi ta sd inline thi cac the li se co khoang trang do dau ENTER de
+    lai -> de loai bo cac khoang trang do thi ta nen sd
+    display: flex de toi uu hon*/
+    margin-left: 50px;
+}
+
+.navbar .action {
+    margin-left: auto;
+}
+
+.navbar ul a {
+    color: #4f5361;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 8px 14px;
+}
+
+.navbar .action {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .action-link {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.navbar .action-btn {
+    padding: 13px 16px;
+    margin-left: 18px;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+}
+/*============== Hero ====================*/
+.hero-wrap {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background-color: #e6f0ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-wrap .info {
+    width: 50.36%;
+}
+
+.hero-wrap .sub-title {
+    color: #687690;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    /* or 0.018rem */
+}
+
+.hero-wrap .title {
+    margin-top: 8px;
+    color: #000336;
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 1.1875em;
+}
+
+.hero-wrap .desc {
+    margin-top: 30px;
+    color: #5a6473;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.78em;
+}
+
+.hero-cta {
+    margin-top: 40px;
+    min-width: 170px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 18.5px 16px;
+}
+
+.image-hero {
+    position: absolute;
+    bottom: 0;
+    right: calc((100vw - 1110px) / 2 - 100px);
+    /* voi right dc calc nhu v thi, khi ta zoom in screen thi h/a se chay vao ben trong giong nhu sign in, noi dung... */
+    /* right: 65px; */
+    /* con ma right voi dvi tuyet doi nhu v thi khi ta zoom in thi h/a van dung yen 1 cho sao cho cach le phai mh 65px */
+}
+
+/* ============client============= */
+
+.client {
+    margin-top: 79px;
+    padding: 43px 0 41px;
+}
+
+.client .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client .stars {
+    color: #ffca56;
+}
+
+.client .row-desc {
+    margin-top: 23px;
+    color: #7d8589;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.client .logos {
+    margin-top: 70x;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client .logos a {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding: 0 42px;
+
+    border-radius: 6px;
+    /* background-color: orange; */
+}
+
+.client .logos a:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =============Guide=============== */
+.guides {
+    margin-top: 40px;
+    padding: 79px 0;
+}
+
+.guides .title {
+    position: relative;
+    color: #000339;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.guides .title::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+}
+
+.guides .desc {
+    margin: 20px auto 0;
+    width: 459px;
+    max-width: 100%;
+    color: #5a6473;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.list-guides {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.guide-item {
+    margin: 0 70px;
+    text-align: center;
+}
+
+.guide-item .guide-title {
+    margin-top: 26px;
+    color: #3b3c45;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.guide-item .link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0689ff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.guide-item .arrow {
+    position: relative;
+    right: -7px;
+}
+
+.guide-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.guide-cta .btn {
+    margin-top: 48px;
+    min-width: 170px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* ==============Featured Properties ===============*/
+.featured {
+    margin-top: 41px;
+    padding: 110px 0;
+    background-color: #f5fafe;
+}
+
+.featured .title {
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.featured .row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured .arrow {
+    position: relative;
+    top: -1px;
+    left: 2px;
+}
+
+.featured .desc {
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.featured .link {
+    color: #0689ff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.featured .list {
+    margin-top: 70px;
+    display: flex;
+    /* có tác dụng làm cho 3 item đang xếp đè dọc lên nhau được nằm ngang kế tiếp nhau */
+    gap: 30px;
+    /* có tác dụng làm cho 3 item đều cách nhau 30px */
+}
+
+.featured .item {
+    flex: 1;
+    /* tuong duong flex-grow: 1  -- tỉ lệ của các item sẽ là 1: 1: 1 */
+    border-radius: 12px;
+    background: #fff;
+}
+
+.featured .thumb {
+    width: 100%;
+    /* width 100% là để các thumb có width bằng với độ dài của thẻ content-thẻ cha - thẻ item */
+    /* nếu k có width: 100% thì thumb sẽ được hiển thị với kích thước gốc của hình ảnh */
+    height: 227px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.featured .list .title a {
+    color: #000339;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.featured .list .desc {
+    margin-top: 11px;
+    color: #a3a6ab;
+    font-size: 1.4rem;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.featured .list .body {
+    padding: 17px 20px 22px;
+}
+
+.featured .info {
+    margin-top: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.featured .label {
+    color: #4d4d52;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.featured .label {
+    margin-left: 8px;
+}
+
+.featured .info .icon:not(:first-child) {
+    margin-left: 23px;
+}
+
+/* ============Stats=========== */
+.stats {
+    margin-top: 75px;
+    padding: 50px 0;
+}
+
+.stats .content {
+    /* ghi đè lai cac property cua the content dung chung */
+    /* mặc dù bị ghi đè nhưng nó vẫn có các thuộc tính như là: margin: 0 auto, max-width~ dùng khi ta hiển thị
+    với một màn hình có kích thước nhỏ hơn thì nó sẽ hiện thị với giá trị trong max-width */
+    width: 1017px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-block {
+    position: relative;
+}
+
+.stats .img-block,
+.stats .info {
+    width: 50%;
+    /* width cua img-block se la dvi tuong doi la boi vi khi content thay doi width thi phan img-block 
+    se duoc thay doi theo */
+
+    /* Tại sao ta phải đặt width cho cả 2 element .img-block and .info 
+    tại vì t nghĩ rằng chỉ cần đặt cho img-block thì stats info mặc định sẽ có width là phần còn lại trong width của content */
+}
+
+.stats .img-block .image {
+    display: block;
+    margin-left: auto;
+    width: 400px;
+    /* ta k can dat width co dvi la % an theo the cha-img-block bởi vì ta vẫn muốn hình ảnh được hiển thị với kích thước
+    gốc là 400px .. chứ k phải mún nó bị thu nhỏ lại khi width của content bị thay đổi -> width của img.block thay đổi -> 
+    width của hình ảnh bị thay đổi -> méo ảnh , k cân xứng*/
+    height: 460px;
+
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.stats .row .info {
+    padding-top: 79px;
+    padding-left: 165px;
+}
+
+.stats .info .sub-title {
+    position: relative;
+    width: 269px;
+
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.28;
+}
+
+.stats .info .sub-title::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+
+    content: "";
+    display: inline-block;
+    border-radius: 12px;
+
+    background: #000339;
+    width: 41px;
+    height: 4px;
+}
+
+.stats .info .desc {
+    width: 309px;
+
+    margin-top: 20px;
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.stats-trend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 45px 22px;
+
+    width: 239px;
+    border-radius: 0px 0px 12px 12px;
+    background: #fff;
+}
+
+.stats-trend .row {
+    justify-content: space-between;
+}
+
+.stats-trend .value {
+    color: #000339;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+.stats-trend .desc {
+    margin-top: 8px;
+    width: 194px;
+
+    color: #a7a7a7;
+
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.stats-trend .separate {
+    margin-top: 26px;
+
+    height: 1.2px;
+    background: #e9e9e9;
+}
+
+.avatar-row {
+    display: flex;
+    gap: 16px 14px;
+    flex-wrap: wrap;
+
+    margin-top: 26px;
+}
+
+.group-avatar {
+    display: flex;
+}
+
+.group-avatar .avatar {
+    margin-left: -3px;
+    width: 16.337px;
+    height: 16.337px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    /* property common in avt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 7px;
+    font-weight: 450;
+    background-color: var(--background-color, #fff);
+}
+
+.group-avatar .avatar:first-child {
+    margin-left: 0px;
+}
+
+.group-avatar:nth-child(4) .avatar-random {
+    background-color: blue;
+    color: white;
+}
+
+.stats .sale {
+    margin-top: 110px;
+}
+
+.stats .sale .content {
+    width: 985px;
+    display: flex;
+    gap: 220px;
+}
+
+.stats .sale .value {
+    color: #000;
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.stats .sale .sub-desc {
+    margin-top: 22px;
+    color: #7b8087;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* =========Subscription========== */
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 370px;
+    background-color: #063183;
+    border-radius: 20px;
+}
+
+.subscription .info {
+    width: 670px;
+    max-width: 100%;
+    /* margin: 110px 80px; */
+    padding: 110px 80px;
+    /* padding or margin cũng dc */
+}
+
+.subscription .info .sub-title {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.subscription .info .desc {
+    margin-top: 15px;
+    color: #aaa;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.subscription .image {
+    position: absolute;
+    bottom: 0;
+    left: 670px;
+}
+
+.sub-cta {
+    margin-top: 20px;
+    padding: 18.5px 0;
+    min-width: 151px;
+    background-color: white;
+    color: #002366;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/*=============Footer============ */
+.footer {
+    margin-top: 55px;
+    padding: 50px 0 58px;
+}
+
+.footer .row-top {
+    display: flex;
+    gap: 185px;
+}
+
+.footer .sub-title {
+    color: #1c1c1d;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.footer .item a,
+.footer .desc {
+    color: #7a7a7e;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.footer .desc {
+    line-height: 1.75;
+}
+
+.footer .desc {
+    margin-top: 42px;
+}
+
+.footer .list {
+    margin-top: 42px;
+}
+
+.footer .item {
+    margin-top: 21px;
+}
+
+.footer .row-top .item {
+    white-space: nowrap;
+}
+
+.footer .social {
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+}
+
+.footer .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    /* background-color: orange; */
+    border-radius: 4px;
+}
+
+.footer .social-link:hover {
+    background-color: #ebebeb;
+}
+
+.footer .row-end {
+    margin-top: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .row-end .copyright {
+    color: #c2c2c2;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
