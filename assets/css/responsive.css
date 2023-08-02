@@ -9,7 +9,7 @@
 }
 
 /* Tablet and Mobile */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
     .navbar ul {
         position: relative;
         display: none;
@@ -76,17 +76,101 @@
     .separate {
         border-top: 2px solid #ebebeb;
     }
+
+    .image-hero {
+        display: none;
+    }
+
+    .hero-wrap .info {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-wrap .info .desc {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .client .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+    .guide-item {
+        margin: 0;
+        flex: 1;
+    }
+
+    .featured .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .img-block {
+        margin-top: 80px;
+        order: 2;
+    }
+
+    .stats .img-block,
+    .stats .info {
+        width: 100%;
+    }
+
+    .stats .row .info {
+        order: 1;
+        padding: 0;
+    }
+
+    .stats .info .sub-title {
+        width: 60%;
+    }
+
+    .stats .info .desc {
+        width: 100%;
+    }
+
+    .stats .sale .content {
+        gap: 130px;
+    }
+
+    .stats .sale .value {
+        font-size: 5rem;
+    }
+
+    .stats .sale .sub-desc {
+        font-size: 1.4rem;
+    }
+
+    .subscription .image {
+        display: none;
+    }
+
+    .footer .row-top {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 80px;
+    }
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
     .show-on-mobile {
         display: none;
     }
 }
 
 /* Mobile */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
     .menu-drawer {
         padding: 40px;
         inset: 0 25% 0 0;
@@ -98,5 +182,65 @@
 
     .show-on-mobile {
         display: block;
+    }
+
+    .hero-wrap .sub-title {
+        font-size: 1.4rem;
+    }
+
+    .hero-wrap .title {
+        margin-top: 15px;
+        font-size: 4.5rem;
+    }
+
+    .hero-wrap .desc {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .client .logos {
+        row-gap: 20px;
+    }
+
+    .list-guides {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .featured .row {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    .stats .info .sub-title {
+        width: 100%;
+    }
+
+    .stats .img-block .image {
+        width: 100%;
+    }
+
+    .stats .sale .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 65px;
+    }
+
+    .subscription .info {
+        padding: 0 30px;
+    }
+
+    .footer .row-top {
+        gap: 100px;
+    }
+
+    .footer .row-end {
+        flex-direction: column;
+        row-gap: 22px;
     }
 }

@@ -339,8 +339,9 @@ a {
 }
 
 .featured .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 70px;
-    display: flex;
     /* có tác dụng làm cho 3 item đang xếp đè dọc lên nhau được nằm ngang kế tiếp nhau */
     gap: 30px;
     /* có tác dụng làm cho 3 item đều cách nhau 30px */
@@ -497,8 +498,13 @@ a {
     background: #fff;
 }
 
-.stats-trend .row {
+.stats-trend .sub-row {
     justify-content: space-between;
+}
+
+.stats-trend .row img {
+    width: 28px;
+    height: 26px;
 }
 
 .stats-trend .value {

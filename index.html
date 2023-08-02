@@ -178,13 +178,13 @@
                 <script>
                     const pcNav = document.querySelector("#pc-nav");
                     const mobileNav = document.querySelector("#mobile-nav");
-
+                    // Copy from PC NAV to MOBILE NAV
                     mobileNav.innerHTML = pcNav.innerHTML;
                 </script>
             </div>
         </header>
 
-        <main id="home" hidden>
+        <main id="home">
             <div class="hero-wrap">
                 <div class="content">
                     <!-- Info -->
@@ -232,7 +232,7 @@
                     <!-- Description -->
                     <div class="row row-desc">
                         <p class="des">More than 45,000+ companies trust besnik</p>
-                        <p class="des">5 Star Ratings (2k+ Review)</p>
+                        <p class="des hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                     </div>
                     <div class="logos">
                         <a href="#!"
@@ -479,7 +479,7 @@
                             />
                             <!-- Trends -->
                             <div class="stats-trend">
-                                <div class="row">
+                                <div class="sub-row">
                                     <strong class="value">40,000+</strong>
                                     <img
                                         src="./assets/img/growth-icon.svg"
@@ -679,7 +679,7 @@
             </div>
         </main>
         <!-- Footer -->
-        <div id="contact" class="footer" hidden>
+        <div id="contact" class="footer">
             <div class="content">
                 <!-- Product -->
                 <div class="row row-top">
